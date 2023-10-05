@@ -27,7 +27,7 @@ class TextSizeActivity : AppCompatActivity() {
             adapter = TextSizeAdapter(textSizes){
                 setResult(RESULT_OK,
                     Intent(context, DisplayActivity::class.java).apply{
-                        putExtra(TEXT_SIZE, it)
+                        putExtra(TEXT_SIZE, it.toFloat())
                     }
                 )
                 finish();
